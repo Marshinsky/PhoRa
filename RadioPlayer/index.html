@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="WXKIZXSHI">
+    <meta name="description" content="PHORA — phonk radio">
+    <meta name="keywords" content="радиостанция,радио,фонк,фонк радио,фора,phora">
+    <title>PHORA — радиостанция</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <audio id="music" autoplay>
+        <source src="https://www.radioking.com/play/phonk-radio4">
+    </audio>
+
+    <div class="player">
+      <img id="play" src="icons/pause.svg" onclick="muteAudio()" type="button" class="play">
+    </div>
+
+    <script>
+      var audioT = document.getElementById("music");
+      function muteAudio() {
+          audioT.muted = !audioT.muted;
+        }
+    </script>
+
+  </body>
+</html>
