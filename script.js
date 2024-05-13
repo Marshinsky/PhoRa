@@ -32,8 +32,8 @@ music.volume = 0.5;
    event.returnValue = false;
 
    if (delta > 0) {
-     music.volume += 0.1;
+     music.volume += 0.01;
    } else {
-     music.volume -= 0.1;
+     music.volume -= 0.01;
    } ; // Выводим направление колёсика мыши
  }
