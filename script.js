@@ -1,6 +1,7 @@
 music.volume = 0.5;
 var num = 50;
 
+
 // Функция для добавления обработчика событий
  function addHandler(object, event, handler) {
    if (object.addEventListener) {
@@ -41,3 +42,12 @@ var num = 50;
    } ;
    document.getElementById("volume").textContent = num;
  }
+
+ const audio = new Audio("https://myradio24.org/phora");
+ const buttons = document.querySelectorAll("div");
+
+ buttons.forEach(button => {
+   button.addEventListener("click", () => {
+     audio.play();
+  });
+});
