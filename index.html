@@ -5,6 +5,7 @@
     <meta name="author" content="WXKIZXSHI">
     <meta name="description" content="PHORA — phonk radio">
     <meta name="keywords" content="радиостанция,радио,фонк,фонк радио,фора,phora">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PHORA — радиостанция</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,20 +15,21 @@
   <body>
 
     <audio id="music" autoplay>
-        <source src="https://www.radioking.com/play/phonk-radio4">
+        <source src="https://myradio24.org/phora">
     </audio>
 
     <div class="player">
       <div class="avatar"><img src="icons/avatar.png" alt="Обложка" class="ava"></div>
-      <div class="name">Track Name</div>
-      <div class="art">Author</div>
+      <div class="name" id="name">Track Name</div>
+      <div class="art" id="art">Author</div>
+      <div id="play" onclick="play" class="play">
+        Если аудио не воспроизводится
+      </div>
     </div>
 
     <div class="line" id="volume">50</div>
 
-
-
-    <script src="script.js"></script>
+    <script src="script.js">src="https://myradio24.com/player/player.js?v3.27" data-port="phora" data-interval=15 data-vmid=0 </script>
 
   </body>
 </html>
