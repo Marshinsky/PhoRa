@@ -3,40 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhoRa</title>
+    <title>PhoRa - Just Phonk</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>PhoRa</h1>
-
-        <audio controls>
-            <source src="https://stream.zeno.fm/1hqwfofxgaqtv" type="audio/mpeg">
-            Ваш браузер не поддерживает аудиоплеер.
-        </audio>
-
-        <div class="buttons">
-            <button onclick="showInfo('info')">Информация о радио</button>
-            <button onclick="showInfo('schedule')">Расписание передач</button>
-            <button onclick="showInfo('contact')">Контакты</button>
-        </div>
-
-        <div id="info" class="info">
-            <p>Здесь будет информация о радиостанции.</p>
-        </div>
-        <div id="schedule" class="info" style="display:none;">
-            <p>Расписание передач радио:...</p>
-        </div>
-        <div id="contact" class="info" style="display:none;">
-            <p>Контактная информация: email@example.com</p>
+    <div class="background">
+        <div class="container">
+            <h1>PhoRa</h1>
+            <div class="player">
+                <button id="play">Старт</button>
+                <button id="mute">Отключить звук</button>
+            </div>
         </div>
     </div>
 
     <script>
-        function showInfo(section) {
-            document.querySelectorAll('.info').forEach(div => div.style.display = 'none');
-            document.getElementById(section).style.display = 'block';
-        }
+        const audio = new Audio('your-stream-url.mp3');
+        document.getElementById('play').onclick = () => audio.play();
+        document.getElementById('mute').onclick = () => audio.muted = !audio.muted;
     </script>
 </body>
 </html>
