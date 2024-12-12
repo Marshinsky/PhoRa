@@ -1,49 +1,52 @@
-html {
-  background-color: rgb(5, 5, 11);
-  font-family: Montserrat
-}
-.player {
-  width: 400px;
-  height: 500px;
-  border-radius: 30px;
-  background-color: rgb(49, 50, 56);
-  border: 1px solid gray;
-  margin: 5% auto 1% auto;
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
 }
 
-.line {
-  color: white;
-  margin: 10px auto;
-  font-size: 50px;
-  text-align: center;
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.avatar {
-  margin: 15px auto auto 12%;
+h1 {
+    margin-bottom: 20px;
 }
-.ava {
-  width: 300px;
-  height: 300px;
-  margin: 20px auto;
-  border-radius: 10px;
-  align-content: center;
+
+audio {
+    width: 100%;
+    margin: 20px 0;
 }
-.name {
-  margin: auto;
-  color: white;
-  font-size: 35px;
-  font-weight: 500;
-  text-align: center;
+
+.buttons {
+    margin-bottom: 20px;
 }
-.art {
-  margin: auto;
-  color: rgb(255, 0, 105);
-  font-size: 25px;
-  font-weight: 500;
-  text-align: center;
+
+button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.play {
-  color: white;
-  margin: 20px auto;
-  text-align: center;
+
+button:hover {
+    background-color: #005f7f;
+}
+
+.info {
+    margin-top: 20px;
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
