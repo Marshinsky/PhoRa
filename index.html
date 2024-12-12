@@ -19,8 +19,21 @@
 
     <script>
         const audio = new Audio('https://stream.zeno.fm/1hqwfofxgaqtv');
+        let volume = 1; // Установить громкость от 0.0 до 1.0
+        audio.volume = volume;
+
         document.getElementById('play').onclick = () => audio.play();
-        document.getElementById('mute').onclick = () => audio.muted = !audio.muted;
+        document.getElementById('mute').onclick = () => {
+            audio.muted = !audio.muted;
+            document.getElementById('mute').textContent = audio.muted ? 'Включить звук' : 'Отключить звук';
+        };
+
+        document.getElementById('player').onwheel = (event) => {
+            event.preventDefault();
+            volume = Math.min(Math.max(volume + (event.deltaY > 0 ? -0.1 : 0.1), 0), 1);
+            audio.volume = volume;
+            document.getElementById('volume-display').textContent = `Громкость: ${Math.round(volume * 100)}%`;
+        };
     </script>
 </body>
 </html>
